@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "insights-hub": {
+      "command": "node",
+      "args": ["mcp-server.js", "--stdio"],
+      "cwd": "<你的项目路径>",
+      "env": {
+        "MINDSPHERE_CLIENT_ID": "<你的Client ID>",
+        "MINDSPHERE_CLIENT_SECRET": "<你的Client Secret>",
+        "MINDSPHERE_BASE_URL": "https://gateway.eu1.mindsphere.io",
+        "MINDSPHERE_TOKEN_URL": "https://<你的租户>.piam.eu1.mindsphere.io/oauth/token",
+        "MINDSPHERE_TENANT": "<你的租户名>"
+      }
+    }
+  }
+}
