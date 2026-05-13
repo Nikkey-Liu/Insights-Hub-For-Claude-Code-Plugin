@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# MCP config — contains real credentials, DO NOT commit
+.mcp.json
+
+# Claude Code internal
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
