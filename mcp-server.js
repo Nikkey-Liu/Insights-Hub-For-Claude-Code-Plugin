@@ -1,5 +1,8 @@
 // mcp-server.js — Insights Hub MCP Server
-// Exposes all MindSphere APIs from the Postman collection as MCP tools
+// Exposes all Insights Hub APIs from the Postman collection as MCP tools
+// Note: MindSphere is the former brand name of Insights Hub. The API gateway domain
+// (mindsphere.io), environment variable names (MINDSPHERE_*), and Postman collection
+// filename still retain the "MindSphere" identifier for backward compatibility.
 
 const { McpServer } = require("@modelcontextprotocol/sdk/server/mcp.js");
 const { StreamableHTTPServerTransport } = require("@modelcontextprotocol/sdk/server/streamableHttp.js");

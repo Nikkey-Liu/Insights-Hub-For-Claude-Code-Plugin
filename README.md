@@ -1,10 +1,12 @@
 # Insights Hub MCP Server
 
-将 MindSphere/Insights Hub API 暴露为 Claude Code 可直接调用的 MCP 工具，让 AI 助手能够查询资产、时间序列、事件、异常检测等工业物联网数据。
+将 Insights Hub API 暴露为 Claude Code 可直接调用的 MCP 工具，让 AI 助手能够查询资产、时间序列、事件、异常检测等工业物联网数据。
+
+> **历史说明**：MindSphere 是 Insights Hub 的曾用名称。Siemens 将 MindSphere 品牌更名为 Insights Hub，但底层 API 网关、环境变量名称和域名仍保留 `mindsphere` 标识。
 
 ## 这不是传统 Plugin
 
-这个项目是 **MCP (Model Context Protocol) Server**，而非 Claude Code 的传统 Plugin。它通过标准 MCP 协议让 Claude Code 发现并调用 MindSphere API。本质上是一个翻译层：Claude Code 说 MCP，这个服务转译为 MindSphere REST API 调用。
+这个项目是 **MCP (Model Context Protocol) Server**，而非 Claude Code 的传统 Plugin。它通过标准 MCP 协议让 Claude Code 发现并调用 Insights Hub API。本质上是一个翻译层：Claude Code 说 MCP，这个服务转译为 Insights Hub REST API 调用。
 
 ## 快速开始
 
@@ -18,7 +20,7 @@ npm install
 
 ### 2. 配置凭证
 
-复制 `.mcp.json` 并填入你的 MindSphere 凭证：
+复制 `.mcp.json` 并填入你的 Insights Hub 凭证：
 
 ```json
 {
@@ -86,7 +88,7 @@ npm install
 
 ## 可用工具一览
 
-服务器启动时会自动从 Postman Collection (`MindSphere-V3-Training.postman_collection.json`) 解析并注册 **107 个工具**，覆盖 15 个 MindSphere 服务：
+服务器启动时会自动从 Postman Collection (`MindSphere-V3-Training.postman_collection.json`) 解析并注册 **107 个工具**，覆盖 15 个 Insights Hub 服务：
 
 | 服务 | 工具前缀 | 数量 | 主要功能 |
 |------|----------|------|----------|
@@ -150,7 +152,7 @@ git push -u origin main
 git clone git@github.com:your-org/insights-hub-mcp.git
 cd insights-hub-mcp
 npm install
-# 编辑 .mcp.json 填入自己的 MindSphere 凭证
+# 编辑 .mcp.json 填入自己的 Insights Hub 凭证
 # 在 Claude Code 中直接使用
 ```
 
@@ -165,13 +167,13 @@ npm publish
 ### 接收方需要什么
 
 1. **Node.js 18+** 环境
-2. **MindSphere 租户凭证**（Client ID + Client Secret + 租户名）
+2. **Insights Hub 租户凭证**（Client ID + Client Secret + 租户名）
 3. **Claude Code**（VSCode 扩展或 CLI）
 4. 将这些配置填入 `.mcp.json` 并放在项目根目录
 
 ## 在开发项目中使用
 
-### 场景：开发一个需要查询 MindSphere 数据的应用
+### 场景：开发一个需要查询 Insights Hub 数据的应用
 
 ```
 # 项目结构示例
@@ -256,7 +258,7 @@ npm start
 
 ```js
 server.registerTool("my_customTool", {
-  description: "My custom MindSphere operation",
+  description: "My custom Insights Hub operation",
   inputSchema: {
     assetId: z.string().describe("Target asset ID"),
   },
