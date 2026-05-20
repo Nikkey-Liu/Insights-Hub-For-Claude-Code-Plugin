@@ -3,7 +3,8 @@
 Exposes Insights Hub APIs as MCP tools that Claude Code can call directly, enabling AI assistants to query assets, time series, events, anomaly detection, and other industrial IoT data.
 
 > **Historical Note**: MindSphere is the former brand name of Insights Hub. Siemens rebranded MindSphere to Insights Hub, but the underlying API gateway, environment variable names, and domain names still retain the `mindsphere` identifier for backward compatibility.
-
+# Demo Link
+[Demo video](https://www.bilibili.com/video/BV1ji596EE7u/?spm_id_from=333.1387.homepage.video_card.click&vd_source=eb43ace3feb71c95cf2ce025e40c2646)
 ## Not a Traditional Plugin
 
 This project is an **MCP (Model Context Protocol) Server**, not a traditional Claude Code Plugin. It uses the standard MCP protocol to let Claude Code discover and call Insights Hub APIs. Essentially a translation layer: Claude Code speaks MCP, and this service translates to Insights Hub REST API calls.
