@@ -4,7 +4,7 @@
 
 > **历史说明**：MindSphere 是 Insights Hub 的曾用名称。Siemens 将 MindSphere 品牌更名为 Insights Hub，但底层 API 网关、环境变量名称和域名仍保留 `mindsphere` 标识。
 # Demo Link
-[Demo](https://www.bilibili.com/video/BV1ji596EE7u/?spm_id_from=333.1387.homepage.video_card.click&vd_source=eb43ace3feb71c95cf2ce025e40c2646)
+[Demo 效果展示视频](https://www.bilibili.com/video/BV1ji596EE7u/?spm_id_from=333.1387.homepage.video_card.click&vd_source=eb43ace3feb71c95cf2ce025e40c2646)
 ## 这不是传统 Plugin
 
 这个项目是 **MCP (Model Context Protocol) Server**，而非 Claude Code 的传统 Plugin。它通过标准 MCP 协议让 Claude Code 发现并调用 Insights Hub API。本质上是一个翻译层：Claude Code 说 MCP，这个服务转译为 Insights Hub REST API 调用。
